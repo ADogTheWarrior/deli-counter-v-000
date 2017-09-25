@@ -2,8 +2,12 @@ def line(array)
   if array.size == 0
     return "The line is currently empty"
   else
-    output = 
-    # needs code
+    output = "The line is currently:"
+    array.each_with_index do |name, index|
+      position = index + 1
+      output << " #{position}. #{name}"
+    end
+    return output
   end
 end
 
